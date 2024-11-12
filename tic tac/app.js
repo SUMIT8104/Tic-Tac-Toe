@@ -30,6 +30,7 @@ const enablebox=()=>{
 }
 const resetgame=()=>{
     turn0=true;
+    count=0;
     enablebox();
     msgcon.classList.add("hide");
 }
@@ -65,12 +66,12 @@ const winneer=()=>{
             {
                 
                 showwinner(pos1);
+                return;
             }
-            else{
-               
-               msgcon.classList.remove("hide");
-            }
+            
         }
+        if(count===9 && pos1!=pos2 && pos2!=pos1)
+            msgcon.classList.remove("hide");
     }
 
 }
