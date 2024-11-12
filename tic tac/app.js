@@ -70,8 +70,11 @@ const winneer=()=>{
             }
             
         }
-        if(count===9 && pos1!=pos2 && pos2!=pos1)
+        if (count === 9) {
+            msg.innerText = "It's a draw!";
             msgcon.classList.remove("hide");
+            disablebox();
+        }
     }
 
 }
